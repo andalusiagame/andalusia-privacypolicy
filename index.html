@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kebijakan Privasi resmi aplikasi Andalusia — game edukasi sejarah Andalusia oleh Tim PKM Universitas Negeri Surabaya.">
+  <meta name="author" content="AndalusiaProject">
+  <title>Kebijakan Privasi — Andalusia</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --text: #1c1c1c;
+      --muted: #5a5a5a;
+      --accent: #7a5c1a;
+      --accent-dark: #4a3810;
+      --border: #e3dfd6;
+      --highlight: #faf7f0;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(145deg, #2a2218 0%, #4f3f24 55%, #6b5428 100%);
+      color: #fff;
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+
+    header .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    header .subtitle {
+      opacity: 0.92;
+      font-size: 1rem;
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    nav.toc {
+      max-width: var(--max);
+      margin: -1.5rem auto 0;
+      padding: 0 1rem;
+    }
+
+    nav.toc .inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.06);
+    }
+
+    nav.toc h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    nav.toc ol {
+      padding-left: 1.25rem;
+      columns: 1;
+    }
+
+    nav.toc li { margin-bottom: 0.35rem; }
+    nav.toc a { color: var(--accent-dark); text-decoration: none; }
+    nav.toc a:hover { text-decoration: underline; }
+
+    main {
+      max-width: var(--max);
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 1.85rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+      margin-bottom: 1.25rem;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meta strong { color: var(--text); }
+
+    h2.section {
+      font-size: 1.2rem;
+      color: var(--accent-dark);
+      margin: 2rem 0 0.75rem;
+      padding-top: 0.25rem;
+    }
+
+    h2.section:first-child { margin-top: 0; }
+
+    h3.sub {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    p, li { margin-bottom: 0.7rem; }
+    ul, ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+
+    a { color: #6b4f0a; word-break: break-word; }
+    a:hover { color: var(--accent-dark); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--highlight);
+      font-weight: 600;
+      color: var(--accent-dark);
+    }
+
+    .note {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.1rem;
+      margin: 1.1rem 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.94rem;
+    }
+
+    .note strong { color: var(--accent-dark); }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      background: var(--highlight);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+      color: var(--muted);
+    }
+
+    .english-summary {
+      background: #f0f4fa;
+      border: 1px solid #d5e0f0;
+      border-radius: 12px;
+      padding: 1.75rem 1.85rem;
+    }
+
+    .english-summary h2 {
+      font-size: 1.15rem;
+      color: #1a3a5c;
+      margin-bottom: 0.75rem;
+    }
+
+    .english-summary p, .english-summary li {
+      font-size: 0.94rem;
+      color: #2a2a2a;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: 0 1rem 2.5rem;
+      line-height: 1.6;
+    }
+
+    footer a { color: var(--muted); }
+
+    @media (min-width: 640px) {
+      nav.toc ol { columns: 2; column-gap: 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 1.35rem 1.1rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Kebijakan Privasi Resmi</div>
+  <h1>Andalusia</h1>
+  <p class="subtitle">
+    Game edukasi sejarah Andalusia<br>
+    Tim PKM Universitas Negeri Surabaya — AndalusiaProject
+  </p>
+</header>
+
+<nav class="toc" aria-label="Daftar isi">
+  <div class="inner">
+    <h2>Daftar Isi</h2>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#identitas">Identitas Pengembang</a></li>
+      <li><a href="#deskripsi">Deskripsi Aplikasi</a></li>
+      <li><a href="#data">Data yang Dikumpulkan</a></li>
+      <li><a href="#penggunaan">Penggunaan Data</a></li>
+      <li><a href="#akses">Akses &amp; Pemantauan Progress</a></li>
+      <li><a href="#sekolah">Penggunaan di Lingkungan Sekolah</a></li>
+      <li><a href="#pembayaran">Pembayaran</a></li>
+      <li><a href="#penyimpanan">Penyimpanan &amp; Keamanan</a></li>
+      <li><a href="#retensi">Retensi Data</a></li>
+      <li><a href="#pihak-ketiga">Layanan Pihak Ketiga</a></li>
+      <li><a href="#hak">Hak Pengguna</a></li>
+      <li><a href="#anak">Privasi Peserta Didik</a></li>
+      <li><a href="#internasional">Transfer Data Internasional</a></li>
+      <li><a href="#perubahan">Perubahan Kebijakan</a></li>
+      <li><a href="#kontak">Hubungi Kami</a></li>
+      <li><a href="#english">English Summary</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main>
+
+  <article class="card">
+
+    <p class="meta">
+      <strong>Berlaku sejak:</strong> 21 Juni 2026<br>
+      <strong>Terakhir diperbarui:</strong> 21 Juni 2026<br>
+      <strong>Versi dokumen:</strong> 1.0<br>
+      <strong>Package name:</strong> com.AndalusiaProject.Andalusia
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">Game edukasi</span>
+      <span class="pill">Usia 12–15 tahun</span>
+      <span class="pill">Tanpa in-app purchase</span>
+      <span class="pill">Indonesia</span>
+    </div>
+
+    <h2 class="section" id="pendahuluan">1. Pendahuluan</h2>
+    <p>
+      Kebijakan Privasi ini (“<strong>Kebijakan</strong>”) menjelaskan bagaimana
+      <strong>Tim PKM Universitas Negeri Surabaya — AndalusiaProject</strong>
+      (“<strong>kami</strong>”, “<strong>pengembang</strong>”) memproses informasi
+      pribadi dan data pengguna dalam aplikasi mobile <strong>Andalusia</strong>
+      (“<strong>Aplikasi</strong>”).
+    </p>
+    <div class="note">
+      <strong>Catatan penting:</strong> Andalusia adalah produk edukasi baru yang
+      menggantikan proyek lama <em>Thullabunnesia</em>. Kebijakan ini hanya berlaku
+      untuk Aplikasi Andalusia dengan identitas paket
+      <code>com.AndalusiaProject.Andalusia</code>.
+      Aplikasi ini <strong>tidak</strong> menyediakan pembelian dalam aplikasi,
+      langganan berbayar, atau pemrosesan data pembayaran.
+    </div>
+    <p>
+      Dengan mengunduh, menginstal, mendaftar, atau menggunakan Aplikasi, Anda
+      (atau wali sah Anda jika Anda di bawah 18 tahun) menyetujui Kebijakan ini.
+      Jika Anda tidak setuju, harap hentikan penggunaan Aplikasi dan hapus instalasinya.
+    </p>
+    <p>
+      Kebijakan ini disusun dengan mempertimbangan ketentuan Google Play Console,
+      praktik perlindungan data yang berlaku di Indonesia (termasuk Undang-Undang
+      Perlindungan Data Pribadi), serta konteks penggunaan edukatif di sekolah menengah
+      pertama (SMP, usia 12–15 tahun).
+    </p>
+
+    <h2 class="section" id="identitas">2. Identitas Pengembang</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width:34%">Nama produk</th>
+          <td>Andalusia</td>
+        </tr>
+        <tr>
+          <th>Pengembang</th>
+          <td>Tim PKM Universitas Negeri Surabaya — AndalusiaProject</td>
+        </tr>
+        <tr>
+          <th>Negara domisili</th>
+          <td>Indonesia</td>
+        </tr>
+        <tr>
+          <th>Package name (Android)</th>
+          <td><code>com.AndalusiaProject.Andalusia</code></td>
+        </tr>
+        <tr>
+          <th>Email kontak privasi</th>
+          <td><a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a></td>
+        </tr>
+        <tr>
+          <th>Media sosial resmi</th>
+          <td>
+            <a href="https://www.instagram.com/andalusia.pkm" target="_blank" rel="noopener noreferrer">
+              Instagram @andalusia.pkm
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>Halaman kebijakan privasi</th>
+          <td>
+            <a href="https://andalusiagame.github.io/andalusia-privacypolicy/" target="_blank" rel="noopener noreferrer">
+              https://andalusiagame.github.io/andalusia-privacypolicy/
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section" id="deskripsi">3. Deskripsi Aplikasi</h2>
+    <p>
+      Andalusia adalah <strong>game edukasi interaktif</strong> bergenre platformer
+      dan kuis yang dirancang untuk membantu peserta didik SMP (usia 12–15 tahun)
+      mempelajari sejarah Andalusia melalui gameplay, pengumpulan petunjuk (<em>clue</em>),
+      checkpoint, dan evaluasi pembelajaran.
+    </p>
+    <p>
+      Aplikasi dirancang terutama untuk digunakan melalui <strong>perangkat tablet
+      sekolah</strong> dalam kegiatan pembelajaran. Fitur akun dengan email dan
+      kata sandi disediakan untuk mendukung identifikasi pengguna dalam konteks
+      pembelajaran di sekolah. Penggunaan sign-in di perangkat pribadi belum menjadi
+      prioritas pada tahap pengembangan saat ini.
+    </p>
+
+    <h2 class="section" id="data">4. Data yang Kami Kumpulkan</h2>
+    <p>
+      Kami hanya mengumpulkan data yang diperlukan untuk operasional edukatif Aplikasi,
+      penyimpanan progress belajar, autentikasi akun, analitik teknis, dan evaluasi
+      penggunaan dalam konteks pembelajaran.
+    </p>
+
+    <h3 class="sub">4.1 Data akun (Firebase Authentication)</h3>
+    <p>Apabila fitur akun diaktifkan, kami memproses:</p>
+    <ul>
+      <li><strong>Alamat email</strong> — untuk identifikasi dan login</li>
+      <li><strong>Identitas pengguna (User ID)</strong> — pengenal unik dari Firebase</li>
+      <li><strong>Kata sandi</strong> — dikelola oleh Firebase Authentication; kami tidak menyimpan kata sandi dalam bentuk teks biasa</li>
+    </ul>
+    <p>
+      Metode login yang digunakan: <strong>email dan kata sandi</strong>.
+      Sign-in untuk perangkat pribadi (misalnya Google Sign-In) belum menjadi
+      prioritas dan dapat ditambahkan pada pembaruan mendatang dengan pemberitahuan
+      serta pembaruan Kebijakan ini.
+    </p>
+
+    <h3 class="sub">4.2 Data progress pembelajaran</h3>
+    <p>
+      Untuk mendukung pembelajaran dan pemantauan kemajuan, kami menyimpan data
+      progress permainan yang setara dengan struktur penyimpanan lokal Aplikasi,
+      meliputi seluruh elemen progress pembelajaran (<em>SaveData</em>), antara lain:
+    </p>
+    <ul>
+      <li>Indeks dan status penyelesaian level</li>
+      <li>Skor sesi dan skor terbaik (<em>best score</em>)</li>
+      <li>Jumlah jawaban benar per sesi dan rekor terbaik</li>
+      <li>Petunjuk (<em>clue</em>) yang terkumpul, termasuk kategori Cordova dan Al-Fursan</li>
+      <li>Jawaban checkpoint awal level</li>
+      <li>Jawaban checkpoint NPC</li>
+      <li>Jawaban refleksi akhir level</li>
+      <li>Data sesi pembelajaran yang relevan dengan evaluasi materi</li>
+    </ul>
+    <p>
+      Data ini disimpan <strong>secara lokal di perangkat</strong> dan, apabila fitur
+      sinkronisasi cloud aktif, juga disimpan pada <strong>Google Firebase</strong>
+      agar progress dapat dipulihkan dan dimonitor untuk keperluan edukatif.
+    </p>
+
+    <h3 class="sub">4.3 Preferensi aplikasi</h3>
+    <ul>
+      <li>Pengaturan volume musik dan efek suara (SFX)</li>
+      <li>Status mute audio</li>
+    </ul>
+    <p>Disimpan secara lokal di perangkat pengguna.</p>
+
+    <h3 class="sub">4.4 Data diagnostik dan analitik</h3>
+    <p>Melalui Firebase Analytics dan layanan Google terkait, kami dapat memperoleh data teknis agregat, seperti:</p>
+    <ul>
+      <li>Versi Aplikasi dan sistem operasi perangkat</li>
+      <li>Model perangkat (secara umum)</li>
+      <li>Durasi sesi dan interaksi aplikasi secara agregat</li>
+      <li>Laporan crash dan diagnostik stabilitas (jika diaktifkan)</li>
+    </ul>
+    <p>Data ini digunakan untuk meningkatkan stabilitas dan kualitas Aplikasi, bukan untuk profil iklan.</p>
+
+    <h3 class="sub">4.5 Data yang tidak kami kumpulkan</h3>
+    <p>Aplikasi Andalusia <strong>tidak</strong> dengan sengaja mengumpulkan:</p>
+    <ul>
+      <li>Informasi pembayaran, kartu kredit, atau rekening bank</li>
+      <li>Lokasi GPS presisi atau pelacakan lokasi real-time</li>
+      <li>Kontak telepon, daftar kontak, SMS, atau panggilan</li>
+      <li>Foto, video, mikrofon, atau file media pribadi di luar kebutuhan Aplikasi</li>
+      <li>Data kesehatan atau biometrik</li>
+    </ul>
+
+    <h2 class="section" id="penggunaan">5. Bagaimana Kami Menggunakan Data</h2>
+    <p>Kami menggunakan data yang dikumpulkan untuk tujuan berikut:</p>
+    <ul>
+      <li>Menyediakan, mengoperasikan, dan memelihara fitur Aplikasi</li>
+      <li>Menyimpan, memulihkan, dan menyinkronkan progress pembelajaran pengguna</li>
+      <li>Mengevaluasi pemahaman materi melalui mekanisme kuis, checkpoint, dan refleksi edukatif</li>
+      <li>Memantau kemajuan belajar untuk keperluan edukatif (lihat Bagian 6)</li>
+      <li>Mengautentikasi pengguna melalui email dan kata sandi</li>
+      <li>Menganalisis kinerja Aplikasi secara agregat guna perbaikan bug dan pengembangan fitur</li>
+      <li>Menanggapi pertanyaan, permintaan, atau keluhan terkait privasi</li>
+      <li>Memenuhi kewajiban hukum yang berlaku</li>
+    </ul>
+    <p>
+      Kami <strong>tidak menjual</strong> data pribadi pengguna kepada pihak ketiga
+      dan <strong>tidak menggunakan</strong> data untuk iklan yang dipersonalisasi
+      maupun remarketing.
+    </p>
+
+    <h2 class="section" id="akses">6. Akses dan Pemantauan Progress Pembelajaran</h2>
+    <p>
+      Sebagai Aplikasi edukasi, progress pembelajaran dapat diakses oleh pihak
+      yang berwenang untuk tujuan evaluasi dan pendampingan belajar:
+    </p>
+    <ul>
+      <li>
+        <strong>Saat ini:</strong> admin dan tim pengembang AndalusiaProject dapat
+        mengakses data progress untuk keperluan pengembangan, uji coba, perbaikan
+        bug, dan evaluasi program PKM.
+      </li>
+      <li>
+        <strong>Rencana ke depan:</strong> guru dari sekolah yang menggunakan Aplikasi
+        dalam kegiatan pembelajaran akan dapat memantau progress peserta didik
+        masing-masing untuk keperluan evaluasi pembelajaran di kelas.
+      </li>
+    </ul>
+    <p>
+      Akses guru akan diberikan hanya dalam konteks institusional pendidikan yang
+      bekerja sama dengan pengembang, dengan prinsip kebutuhan minimum data
+      (<em>data minimization</em>) dan hanya untuk tujuan edukatif.
+    </p>
+    <div class="note">
+      <strong>Transparansi:</strong> Apabila fitur dashboard guru diaktifkan,
+      sekolah dan peserta didik akan diberi informasi mengenai ruang lingkup
+      pemantauan tersebut. Kebijakan ini akan diperbarui sebelum fitur tersebut
+      dirilis secara luas.
+    </div>
+
+    <h2 class="section" id="sekolah">7. Penggunaan di Lingkungan Sekolah</h2>
+    <p>
+      Aplikasi ini dirancang untuk mendukung pembelajaran di sekolah menengah pertama.
+      Dalam konteks penggunaan tablet sekolah:
+    </p>
+    <ul>
+      <li>
+        Sekolah disarankan memastikan penggunaan Aplikasi didampingi guru atau
+        sesuai kebijakan TIK sekolah masing-masing.
+      </li>
+      <li>
+        Pembuatan akun dengan email dapat menggunakan email sekolah atau akun
+        yang disediakan/disetujui sekolah, sesuai kebijakan institusi pendidikan.
+      </li>
+      <li>
+        Orang tua/wali disarankan membaca Kebijakan ini dan kebijakan privasi
+        sekolah terkait penggunaan perangkat dan aplikasi edukatif.
+      </li>
+      <li>
+        Jika sekolah bertindak sebagai pengendali data untuk data peserta didik,
+        sekolah dan pengembang dapat mengatur peran masing-masing sesuai kebutuhan
+        operasional dan peraturan yang berlaku.
+      </li>
+    </ul>
+
+    <h2 class="section" id="pembayaran">8. Pembayaran dan Transaksi Keuangan</h2>
+    <p>
+      Aplikasi Andalusia <strong>gratis</strong> dan <strong>tidak</strong>
+      menyediakan fitur in-app purchase, langganan, atau transaksi keuangan
+      dalam Aplikasi. Kami <strong>tidak mengumpulkan</strong> dan
+      <strong>tidak memproses</strong> informasi keuangan pengguna.
+    </p>
+
+    <h2 class="section" id="penyimpanan">9. Penyimpanan dan Keamanan Data</h2>
+    <ul>
+      <li>
+        <strong>Data lokal:</strong> disimpan di folder data aplikasi pada perangkat
+        pengguna dan dapat dihapus melalui pengaturan perangkat atau dengan
+        meng-uninstal Aplikasi.
+      </li>
+      <li>
+        <strong>Data cloud:</strong> disimpan pada infrastruktur Google Firebase /
+        Google Cloud Platform dengan enkripsi saat transmisi (HTTPS/TLS).
+      </li>
+      <li>
+        Kami menerapkan langkah-langkah teknis dan organisasi yang wajar untuk
+        melindungi data dari akses, pengungkapan, atau perubahan yang tidak sah,
+        termasuk kontrol akses admin dan praktik keamanan pengembangan yang sesuai.
+      </li>
+      <li>
+        Tidak ada metode transmisi atau penyimpanan elektronik yang sepenuhnya
+        bebas risiko; kami berkomitmen menangani insiden keamanan secara responsif
+        apabila terjadi.
+      </li>
+    </ul>
+
+    <h2 class="section" id="retensi">10. Retensi Data</h2>
+    <ul>
+      <li>
+        <strong>Data lokal</strong> tetap berada di perangkat hingga pengguna
+        menghapus data aplikasi atau meng-uninstal Aplikasi.
+      </li>
+      <li>
+        <strong>Data akun dan progress cloud</strong> disimpan selama akun masih
+        aktif dan selama diperlukan untuk tujuan edukatif, evaluasi pembelajaran,
+        serta pengembangan program.
+      </li>
+      <li>
+        <strong>Data analitik agregat</strong> dapat disimpan sesuai kebijakan
+        retensi Google Firebase Analytics.
+      </li>
+      <li>
+        Pengguna, wali, atau sekolah dapat mengajukan permohonan penghapusan akun
+        dan data terkait melalui kontak privasi (Bagian 14).
+      </li>
+    </ul>
+
+    <h2 class="section" id="pihak-ketiga">11. Layanan Pihak Ketiga</h2>
+    <p>Aplikasi menggunakan layanan pihak ketiga berikut:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Layanan</th>
+          <th>Penyedia</th>
+          <th>Fungsi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Firebase Authentication</td>
+          <td>Google LLC</td>
+          <td>Login akun email dan kata sandi</td>
+        </tr>
+        <tr>
+          <td>Firebase (Cloud Database / Firestore)*</td>
+          <td>Google LLC</td>
+          <td>Penyimpanan dan sinkronisasi progress pembelajaran</td>
+        </tr>
+        <tr>
+          <td>Firebase Analytics</td>
+          <td>Google LLC</td>
+          <td>Analitik penggunaan dan stabilitas aplikasi</td>
+        </tr>
+        <tr>
+          <td>Google Play Services</td>
+          <td>Google LLC</td>
+          <td>Distribusi melalui Google Play Store</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem;color:var(--muted);">
+      * Jenis layanan Firebase database spesifik (Realtime Database atau Cloud Firestore)
+      dapat disesuaikan pada implementasi teknis tanpa mengubah ruang lingkup data
+      yang dijelaskan dalam Kebijakan ini.
+    </p>
+    <p>
+      Pihak ketiga memproses data sesuai kebijakan privasi masing-masing.
+      Informasi lebih lanjut:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+        Kebijakan Privasi Google
+      </a>.
+    </p>
+
+    <h2 class="section" id="hak">12. Hak Pengguna</h2>
+    <p>
+      Sesuai hukum perlindungan data pribadi yang berlaku di Indonesia, Anda
+      (atau wali sah jika Anda peserta didik di bawah 18 tahun) berhak untuk:
+    </p>
+    <ul>
+      <li>Mengetahui dan memperoleh akses terhadap data pribadi yang kami proses</li>
+      <li>Memperbarui atau melengkapi data yang tidak akurat</li>
+      <li>Meminta penghapusan data pribadi sesuai ketentuan hukum</li>
+      <li>Menarik persetujuan apabila pemrosesan didasarkan pada persetujuan</li>
+      <li>Mengajukan keluhan kepada otoritas perlindungan data yang berwenang</li>
+    </ul>
+
+    <h3 class="sub">Cara menghapus data lokal (Android)</h3>
+    <ol>
+      <li>Buka <strong>Pengaturan</strong> perangkat</li>
+      <li>Pilih <strong>Aplikasi</strong> → <strong>Andalusia</strong></li>
+      <li>Pilih <strong>Penyimpanan</strong> → <strong>Hapus data</strong></li>
+      <li>Atau uninstall Aplikasi</li>
+    </ol>
+
+    <h3 class="sub">Permintaan terkait akun cloud</h3>
+    <p>
+      Permintaan akses, koreksi, atau penghapusan data akun dan progress cloud
+      dapat diajukan ke
+      <a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a>.
+      Sertakan alamat email akun Aplikasi (jika ada) dan jelaskan permintaan Anda.
+      Kami akan merespons dalam jangka waktu wajar, umumnya <strong>14–30 hari kerja</strong>.
+    </p>
+
+    <h2 class="section" id="anak">13. Privasi Peserta Didik (Usia 12–15 Tahun)</h2>
+    <p>
+      Aplikasi Andalusia ditujukan untuk peserta didik SMP dengan rentang usia
+      <strong>12–15 tahun</strong>. Kami memproses data pribadi peserta didik
+      terutama untuk tujuan edukatif dan dengan prinsip kebutuhan minimum data.
+    </p>
+    <ul>
+      <li>
+        Pengguna di bawah 18 tahun disarankan menggunakan Aplikasi dengan
+        persetujuan dan/atau pendampingan orang tua/wali serta guru sekolah.
+      </li>
+      <li>
+        Kami tidak dengan sengaja mengumpulkan data di luar kebutuhan edukatif
+        Aplikasi.
+      </li>
+      <li>
+        Orang tua, wali, atau sekolah dapat menghubungi kami apabila memiliki
+        pertanyaan atau ingin mengajukan penghapusan data peserta didik.
+      </li>
+    </ul>
+
+    <h2 class="section" id="internasional">14. Transfer Data Internasional</h2>
+    <p>
+      Layanan Google Firebase dapat memproses dan menyimpan data di server
+      di luar Indonesia, termasuk di Amerika Serikat dan negara lain tempat
+      Google memiliki pusat data. Google menerapkan mekanisme perlindungan
+      data sesuai kebijakan dan perjanjian layanannya.
+    </p>
+
+    <h2 class="section" id="perubahan">15. Perubahan Kebijakan Privasi</h2>
+    <p>
+      Kami dapat memperbarui Kebijakan ini apabila terdapat perubahan fitur
+      (misalnya dashboard guru, metode login tambahan, atau cakupan data baru).
+      Perubahan material akan dicantumkan dengan memperbarui tanggal
+      “Terakhir diperbarui” di bagian atas halaman ini. Untuk perubahan
+      signifikan, kami dapat memberi pemberitahuan melalui Aplikasi atau
+      kanal resmi AndalusiaProject.
+    </p>
+    <p>
+      Kami menyarankan Anda meninjau halaman ini secara berkala. Versi terbaru
+      selalu tersedia di URL resmi kebijakan privasi kami.
+    </p>
+
+    <h2 class="section" id="kontak">16. Hubungi Kami</h2>
+    <p>
+      Untuk pertanyaan, permintaan hak privasi, keluhan, atau koordinasi dengan
+      sekolah terkait penggunaan Aplikasi, silakan hubungi:
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width:34%">Pengembang</th>
+          <td>Tim PKM Universitas Negeri Surabaya — AndalusiaProject</td>
+        </tr>
+        <tr>
+          <th>Email privasi</th>
+          <td><a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a></td>
+        </tr>
+        <tr>
+          <th>Instagram</th>
+          <td><a href="https://www.instagram.com/andalusia.pkm" target="_blank" rel="noopener noreferrer">@andalusia.pkm</a></td>
+        </tr>
+        <tr>
+          <th>Kebijakan privasi</th>
+          <td><a href="https://andalusiagame.github.io/andalusia-privacypolicy/">andalusiagame.github.io/andalusia-privacypolicy</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </article>
+
+  <section class="card english-summary" id="english" lang="en">
+    <h2>English Summary (Ringkasan Bahasa Inggris)</h2>
+    <p>
+      This page is the official Privacy Policy for <strong>Andalusia</strong>,
+      an educational game about Andalusian history developed by
+      <strong>Universitas Negeri Surabaya PKM Team — AndalusiaProject</strong>
+      (Indonesia). Package name: <code>com.AndalusiaProject.Andalusia</code>.
+    </p>
+    <p><strong>What we collect:</strong></p>
+    <ul>
+      <li>Account data (email, Firebase User ID, password handled by Firebase Auth) for school tablet use</li>
+      <li>Full learning progress data (scores, completed levels, collected clues, quiz/checkpoint/reflection answers)</li>
+      <li>Local app preferences (audio volume settings)</li>
+      <li>Aggregated analytics/diagnostic data via Firebase Analytics</li>
+    </ul>
+    <p><strong>What we do NOT collect:</strong> payment/financial data, precise GPS location, contacts, photos, or microphone data.</p>
+    <p><strong>How we use data:</strong> to operate the app, save/sync learning progress, support educational evaluation, and improve stability. We do not sell personal data or use it for personalized ads.</p>
+    <p><strong>Who can view progress:</strong> currently developers/admins; in the future, authorized school teachers for classroom evaluation.</p>
+    <p><strong>Target users:</strong> students aged 12–15 (lower secondary / SMP), primarily on school tablets.</p>
+    <p><strong>Third parties:</strong> Google Firebase (Auth, cloud storage, Analytics) and Google Play. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p><strong>Your rights:</strong> access, correction, deletion, and complaint rights under applicable law. Contact: <a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a>.</p>
+    <p><strong>Payments:</strong> The app is free with no in-app purchases.</p>
+    <p>
+      For the complete and legally binding version, please refer to the
+      Indonesian sections above. Last updated: June 21, 2026.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Tim PKM Universitas Negeri Surabaya — AndalusiaProject. All rights reserved.</p>
+  <p>
+    <a href="https://andalusiagame.github.io/andalusia-privacypolicy/">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.instagram.com/andalusia.pkm" target="_blank" rel="noopener noreferrer">Instagram</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:andalusiagame@gmail.com">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
