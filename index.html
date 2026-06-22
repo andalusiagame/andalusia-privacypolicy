@@ -270,7 +270,7 @@
     <p class="meta">
       <strong>Berlaku sejak:</strong> 21 Juni 2026<br>
       <strong>Terakhir diperbarui:</strong> 22 Juni 2026<br>
-      <strong>Versi dokumen:</strong> 1.1<br>
+      <strong>Versi dokumen:</strong> 1.2<br>
       <strong>Package name:</strong> com.AndalusiaProject.Andalusia
     </p>
 
@@ -405,10 +405,17 @@
     </ul>
     <p>
       Data ini disimpan <strong>secara lokal di perangkat</strong> (file data aplikasi
-      dan preferensi). <strong>Versi rilis saat ini:</strong> progress belum
-      disinkronkan ke cloud; data progress hanya ada di perangkat dan
-      <strong>terhapus</strong> jika Aplikasi di-uninstal atau data aplikasi
-      dihapus melalui pengaturan perangkat.
+      dan preferensi). Progress <strong>tidak</strong> disinkronkan ke cloud Firebase
+      pada versi rilis saat ini.
+    </p>
+    <p>
+      <strong>Penghapusan data:</strong> progress hilang jika Anda memilih
+      <strong>Hapus data</strong> aplikasi di pengaturan Android, atau jika Anda
+      meng-uninstal Aplikasi <em>dan</em> data tidak dipulihkan otomatis oleh
+      perangkat. Versi Aplikasi terbaru kami menonaktifkan
+      <em>Android Auto Backup</em> agar uninstall + install ulang dimulai dari awal.
+      Pada build lama (sebelum pengaturan ini), Google/Android dapat memulihkan
+      data lokal saat install ulang dengan akun Google yang sama.
     </p>
     <p>
       Apabila fitur sinkronisasi cloud diaktifkan pada pembaruan mendatang,
@@ -643,12 +650,22 @@
     </ul>
 
     <h3 class="sub">Cara menghapus data lokal (Android)</h3>
+    <p style="font-size:0.95rem;margin-bottom:0.75rem;">
+      Cara paling pasti menghapus progress: <strong>Pengaturan → Aplikasi →
+      Andalusia → Penyimpanan → Hapus data</strong> (tanpa perlu uninstall).
+    </p>
     <ol>
       <li>Buka <strong>Pengaturan</strong> perangkat</li>
       <li>Pilih <strong>Aplikasi</strong> → <strong>Andalusia</strong></li>
       <li>Pilih <strong>Penyimpanan</strong> → <strong>Hapus data</strong></li>
-      <li>Atau uninstall Aplikasi</li>
+      <li>Atau uninstall Aplikasi (pada build terbaru tanpa Auto Backup, progress tidak dipulihkan saat install ulang)</li>
     </ol>
+    <div class="note">
+      <strong>Catatan Android:</strong> Jika progress masih muncul setelah install ulang,
+      kemungkinan data dipulihkan oleh <em>Google Play backup / Android Auto Backup</em>
+      dari build sebelumnya. Gunakan <strong>Hapus data</strong> di pengaturan aplikasi
+      untuk reset pasti.
+    </div>
 
     <h3 class="sub">Permintaan terkait akun cloud</h3>
     <p>
@@ -741,7 +758,7 @@
     <p><strong>What we collect:</strong></p>
     <ul>
       <li>Account data (email, Firebase User ID, password handled by Firebase Auth) for school tablet use</li>
-      <li>Learning progress data stored <strong>locally on device</strong> (scores, completed levels, collected clues, quiz/checkpoint/reflection answers) — deleted if the app is uninstalled or app data is cleared</li>
+      <li>Learning progress data stored <strong>locally on device</strong> — use <strong>Clear storage / Clear data</strong> in Android app settings for a guaranteed reset. Newer builds disable Android Auto Backup so reinstall starts fresh; older builds may restore local data via Google backup on reinstall.</li>
       <li>Local app preferences (audio volume settings)</li>
       <li>Aggregated analytics/diagnostic data via Firebase SDK (if enabled in project configuration)</li>
     </ul>

@@ -16,8 +16,8 @@ https://andalusiagame.github.io/andalusia-privacypolicy/
 
 ## Versi
 
-- **Dokumen:** 1.1 — 22 Juni 2026
-- **Perubahan:** perbaikan referensi Bag. 16, klarifikasi progress lokal vs cloud (rencana)
+- **Dokumen:** 1.2 — 22 Juni 2026
+- **Perubahan:** klarifikasi Android Auto Backup vs hapus data; build baru `allowBackup=false`
 
 ## Play Console
 
