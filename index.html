@@ -269,8 +269,8 @@
 
     <p class="meta">
       <strong>Berlaku sejak:</strong> 21 Juni 2026<br>
-      <strong>Terakhir diperbarui:</strong> 21 Juni 2026<br>
-      <strong>Versi dokumen:</strong> 1.0<br>
+      <strong>Terakhir diperbarui:</strong> 22 Juni 2026<br>
+      <strong>Versi dokumen:</strong> 1.1<br>
       <strong>Package name:</strong> com.AndalusiaProject.Andalusia
     </p>
 
@@ -404,9 +404,17 @@
       <li>Data sesi pembelajaran yang relevan dengan evaluasi materi</li>
     </ul>
     <p>
-      Data ini disimpan <strong>secara lokal di perangkat</strong> dan, apabila fitur
-      sinkronisasi cloud aktif, juga disimpan pada <strong>Google Firebase</strong>
-      agar progress dapat dipulihkan dan dimonitor untuk keperluan edukatif.
+      Data ini disimpan <strong>secara lokal di perangkat</strong> (file data aplikasi
+      dan preferensi). <strong>Versi rilis saat ini:</strong> progress belum
+      disinkronkan ke cloud; data progress hanya ada di perangkat dan
+      <strong>terhapus</strong> jika Aplikasi di-uninstal atau data aplikasi
+      dihapus melalui pengaturan perangkat.
+    </p>
+    <p>
+      Apabila fitur sinkronisasi cloud diaktifkan pada pembaruan mendatang,
+      progress dapat juga disimpan pada <strong>Google Firebase</strong> agar dapat
+      dipulihkan dan dimonitor untuk keperluan edukatif. Kebijakan ini akan
+      diperbarui sebelum fitur tersebut dirilis.
     </p>
 
     <h3 class="sub">4.3 Preferensi aplikasi</h3>
@@ -417,7 +425,11 @@
     <p>Disimpan secara lokal di perangkat pengguna.</p>
 
     <h3 class="sub">4.4 Data diagnostik dan analitik</h3>
-    <p>Melalui Firebase Analytics dan layanan Google terkait, kami dapat memperoleh data teknis agregat, seperti:</p>
+    <p>
+      Aplikasi menggunakan Firebase SDK Google. Kami <strong>dapat</strong> memperoleh
+      data teknis agregat melalui Firebase Analytics dan layanan Google terkait
+      (tergantung konfigurasi proyek), seperti:
+    </p>
     <ul>
       <li>Versi Aplikasi dan sistem operasi perangkat</li>
       <li>Model perangkat (secara umum)</li>
@@ -461,14 +473,15 @@
     </p>
     <ul>
       <li>
-        <strong>Saat ini:</strong> admin dan tim pengembang AndalusiaProject dapat
-        mengakses data progress untuk keperluan pengembangan, uji coba, perbaikan
-        bug, dan evaluasi program PKM.
+        <strong>Saat ini:</strong> progress pembelajaran disimpan <strong>hanya
+        di perangkat pengguna</strong>. Tim pengembang dapat melihat progress
+        hanya dalam konteks uji coba langsung, dukungan teknis, atau evaluasi
+        program PKM (bukan akses jarak jauh ke semua perangkat).
       </li>
       <li>
-        <strong>Rencana ke depan:</strong> guru dari sekolah yang menggunakan Aplikasi
-        dalam kegiatan pembelajaran akan dapat memantau progress peserta didik
-        masing-masing untuk keperluan evaluasi pembelajaran di kelas.
+        <strong>Rencana ke depan:</strong> apabila sinkronisasi cloud dan dashboard
+        guru diaktifkan, guru dari sekolah mitra dapat memantau progress peserta
+        didik masing-masing untuk evaluasi pembelajaran di kelas.
       </li>
     </ul>
     <p>
@@ -520,12 +533,18 @@
     <ul>
       <li>
         <strong>Data lokal:</strong> disimpan di folder data aplikasi pada perangkat
-        pengguna dan dapat dihapus melalui pengaturan perangkat atau dengan
-        meng-uninstal Aplikasi.
+        pengguna (termasuk progress pembelajaran dan preferensi audio) dan dapat
+        dihapus melalui pengaturan perangkat atau dengan meng-uninstal Aplikasi.
       </li>
       <li>
-        <strong>Data cloud:</strong> disimpan pada infrastruktur Google Firebase /
-        Google Cloud Platform dengan enkripsi saat transmisi (HTTPS/TLS).
+        <strong>Data akun (Firebase Authentication):</strong> disimpan pada
+        infrastruktur Google Firebase / Google Cloud Platform dengan enkripsi
+        saat transmisi (HTTPS/TLS).
+      </li>
+      <li>
+        <strong>Data progress cloud (rencana):</strong> apabila fitur sinkronisasi
+        cloud diaktifkan di versi mendatang, progress juga akan disimpan pada
+        Firebase dengan enkripsi saat transmisi (HTTPS/TLS).
       </li>
       <li>
         Kami menerapkan langkah-langkah teknis dan organisasi yang wajar untuk
@@ -546,9 +565,13 @@
         menghapus data aplikasi atau meng-uninstal Aplikasi.
       </li>
       <li>
-        <strong>Data akun dan progress cloud</strong> disimpan selama akun masih
-        aktif dan selama diperlukan untuk tujuan edukatif, evaluasi pembelajaran,
-        serta pengembangan program.
+        <strong>Data akun (Firebase Authentication)</strong> disimpan selama akun
+        masih aktif dan selama diperlukan untuk operasional Aplikasi.
+      </li>
+      <li>
+        <strong>Data progress cloud</strong> (jika fitur sinkronisasi diaktifkan
+        di versi mendatang) disimpan selama akun masih aktif dan selama diperlukan
+        untuk tujuan edukatif, evaluasi pembelajaran, serta pengembangan program.
       </li>
       <li>
         <strong>Data analitik agregat</strong> dapat disimpan sesuai kebijakan
@@ -556,7 +579,7 @@
       </li>
       <li>
         Pengguna, wali, atau sekolah dapat mengajukan permohonan penghapusan akun
-        dan data terkait melalui kontak privasi (Bagian 14).
+        dan data terkait melalui kontak privasi (Bagian 16).
       </li>
     </ul>
 
@@ -579,7 +602,7 @@
         <tr>
           <td>Firebase (Cloud Database / Firestore)*</td>
           <td>Google LLC</td>
-          <td>Penyimpanan dan sinkronisasi progress pembelajaran</td>
+          <td><strong>Rencana:</strong> sinkronisasi progress pembelajaran ke cloud (belum aktif di versi rilis saat ini)</td>
         </tr>
         <tr>
           <td>Firebase Analytics</td>
@@ -718,20 +741,20 @@
     <p><strong>What we collect:</strong></p>
     <ul>
       <li>Account data (email, Firebase User ID, password handled by Firebase Auth) for school tablet use</li>
-      <li>Full learning progress data (scores, completed levels, collected clues, quiz/checkpoint/reflection answers)</li>
+      <li>Learning progress data stored <strong>locally on device</strong> (scores, completed levels, collected clues, quiz/checkpoint/reflection answers) — deleted if the app is uninstalled or app data is cleared</li>
       <li>Local app preferences (audio volume settings)</li>
-      <li>Aggregated analytics/diagnostic data via Firebase Analytics</li>
+      <li>Aggregated analytics/diagnostic data via Firebase SDK (if enabled in project configuration)</li>
     </ul>
     <p><strong>What we do NOT collect:</strong> payment/financial data, precise GPS location, contacts, photos, or microphone data.</p>
-    <p><strong>How we use data:</strong> to operate the app, save/sync learning progress, support educational evaluation, and improve stability. We do not sell personal data or use it for personalized ads.</p>
-    <p><strong>Who can view progress:</strong> currently developers/admins; in the future, authorized school teachers for classroom evaluation.</p>
+    <p><strong>How we use data:</strong> to operate the app, save learning progress locally, support educational evaluation, and improve stability. Cloud progress sync is planned for a future update. We do not sell personal data or use it for personalized ads.</p>
+    <p><strong>Who can view progress:</strong> currently stored on the user's device only; in the future, authorized school teachers (when cloud sync is enabled).</p>
     <p><strong>Target users:</strong> students aged 12–15 (lower secondary / SMP), primarily on school tablets.</p>
-    <p><strong>Third parties:</strong> Google Firebase (Auth, cloud storage, Analytics) and Google Play. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    <p><strong>Your rights:</strong> access, correction, deletion, and complaint rights under applicable law. Contact: <a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a>.</p>
+    <p><strong>Third parties:</strong> Google Firebase (Auth; planned cloud storage; Analytics if enabled) and Google Play. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p><strong>Your rights:</strong> access, correction, deletion, and complaint rights under applicable law. Contact: <a href="mailto:andalusiagame@gmail.com">andalusiagame@gmail.com</a> (Section 16).</p>
     <p><strong>Payments:</strong> The app is free with no in-app purchases.</p>
     <p>
       For the complete and legally binding version, please refer to the
-      Indonesian sections above. Last updated: June 21, 2026.
+      Indonesian sections above. Last updated: June 22, 2026.
     </p>
   </section>
 

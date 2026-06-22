@@ -14,13 +14,13 @@ https://andalusiagame.github.io/andalusia-privacypolicy/
 4. **Branch:** `main` → folder `/ (root)`
 5. Save — tunggu 1–5 menit, buka URL di atas
 
+## Versi
+
+- **Dokumen:** 1.1 — 22 Juni 2026
+- **Perubahan:** perbaikan referensi Bag. 16, klarifikasi progress lokal vs cloud (rencana)
+
 ## Play Console
 
 Paste URL di: **App content → Privacy policy**
 
-## Data Safety (ringkas)
-
-- Collects: email (account), app activity / game progress, diagnostics
-- No payment data
-- Encrypted in transit: Yes
-- Privacy policy URL: URL GitHub Pages di atas
+Kisi-kisi jawaban Data Safety: [`PLAY_CONSOLE_DATA_SAFETY.md`](PLAY_CONSOLE_DATA_SAFETY.md)
